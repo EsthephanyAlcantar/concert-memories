@@ -19,7 +19,8 @@ RUN composer install --no-dev --optimize-autoloader
 RUN npm install && npm run build
 
 RUN php artisan storage:link || true
-
+RUN php artisan config:clear && php artisan migrate --force
+RUN php artisan session:table || true
 RUN php artisan migrate --force
 
 RUN chown -R www-data:www-data storage bootstrap/cache
