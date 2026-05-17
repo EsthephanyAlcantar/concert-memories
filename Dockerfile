@@ -20,6 +20,8 @@ RUN npm install && npm run build
 
 RUN php artisan storage:link || true
 
+RUN php artisan migrate --force
+
 RUN chown -R www-data:www-data storage bootstrap/cache
 
 RUN a2enmod rewrite
