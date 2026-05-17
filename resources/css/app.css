@@ -1,0 +1,196 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+body{
+    background:
+    linear-gradient(rgba(4,6,14,.88), rgba(4,6,14,.95)),
+    url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1920');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.container{
+    max-width: 1500px;
+}
+
+h1{
+    letter-spacing: -2px;
+}
+
+.concert-card{
+    background: rgba(10,14,24,.82);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(160, 92, 255, .35) !important;
+    border-radius: 22px;
+    overflow: hidden;
+    transition: .3s ease;
+    box-shadow: 0 20px 50px rgba(0,0,0,.35);
+}
+
+.concert-card:hover{
+    transform: translateY(-8px);
+    border-color: rgba(180, 110, 255, .8) !important;
+}
+
+.concert-image{
+    height: 240px;
+    object-fit: cover;
+}
+
+.card-body{
+    padding: 24px;
+}
+
+.card h2,
+.card h3,
+.card p{
+    color: white;
+}
+
+.text-muted,
+.text-secondary{
+    color: rgba(255,255,255,.68) !important;
+}
+
+.btn-memory{
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    padding: 12px 16px;
+}
+
+.btn-memory:hover{
+    color: white;
+    transform: scale(1.03);
+}
+
+.spotify-btn{
+    background: #1DB954;
+    border: none;
+    color: white;
+    font-weight: 700;
+    padding: 12px 16px;
+    border-radius: 10px;
+}
+
+.spotify-btn:hover{
+    background: #1ed760;
+    color: white;
+    transform: scale(1.03);
+}
+
+.btn-delete{
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    padding: 12px 16px;
+}
+
+.btn-delete:hover{
+    color: white;
+    transform: scale(1.03);
+}
+
+.btn-edit{
+    border: 1px solid rgba(168,85,247,.8);
+    color: #c084fc;
+    background: transparent;
+    border-radius: 10px;
+    font-weight: 700;
+    padding: 12px 16px;
+}
+
+.btn-edit:hover{
+    background: rgba(168,85,247,.15);
+    color: #d8b4fe;
+}
+
+.info-box{
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(168,85,247,.25);
+    border-radius: 16px;
+    padding: 18px;
+    height: 100%;
+}
+
+.info-box h6{
+    color: #c084fc;
+    font-weight: 700;
+}
+
+.info-box p{
+    color: white;
+    margin: 0;
+}
+
+.description-box{
+    background: rgba(255,255,255,.05);
+    border-radius: 18px;
+    padding: 24px;
+}
+
+@media(max-width: 768px){
+    h1{
+        font-size: 44px !important;
+    }
+
+    .concert-image{
+        height: 210px;
+    }
+
+    .card-actions{
+        flex-direction: column;
+    }
+}
+
+.search-input{
+    background: rgba(15,20,35,.82);
+    border: 1px solid rgba(168,85,247,.45);
+    border-radius: 16px;
+    color: white;
+    padding: 18px 22px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+.search-input::placeholder{
+    color: rgba(255,255,255,.55);
+}
+
+.search-input:focus{
+    background: rgba(15,20,35,.95);
+    color: white;
+    border-color: #a855f7;
+    box-shadow: 0 0 0 4px rgba(168,85,247,.2);
+}
+
+.concert-rating{
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+}
+
+.footer-custom{
+    margin-top: 100px;
+    padding: 40px 20px;
+    text-align: center;
+    background: rgba(5,8,20,.85);
+    border-top: 1px solid rgba(168,85,247,.25);
+    backdrop-filter: blur(10px);
+}
+
+.footer-custom p{
+    color: rgba(255,255,255,.75);
+    margin-bottom: 6px;
+}
+
+.footer-custom p:first-child{
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
