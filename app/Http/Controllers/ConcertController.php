@@ -30,10 +30,6 @@ class ConcertController extends Controller
             $data['foto'] = '/storage/' . $path;
         }
 
-        if (empty($data['foto'])) {
-            $data['foto'] = 'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1200';
-        }
-
         Concert::create($data);
 
         return redirect()->route('concerts.index');
