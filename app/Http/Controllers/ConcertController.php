@@ -23,10 +23,15 @@ class ConcertController extends Controller
     {
         $data = $request->all();
 
+        unset($data['image_upload']);
+
         if ($request->hasFile('image_upload')) {
             $path = $request->file('image_upload')->store('concerts', 'public');
-
             $data['foto'] = '/storage/' . $path;
+        }
+
+        if (empty($data['foto'])) {
+            $data['foto'] = 'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1200';
         }
 
         Concert::create($data);
@@ -48,10 +53,15 @@ class ConcertController extends Controller
     {
         $data = $request->all();
 
+        unset($data['image_upload']);
+
         if ($request->hasFile('image_upload')) {
             $path = $request->file('image_upload')->store('concerts', 'public');
-
             $data['foto'] = '/storage/' . $path;
+        }
+
+        if (empty($data['foto'])) {
+            unset($data['foto']);
         }
 
         $concert->update($data);
