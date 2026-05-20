@@ -87,7 +87,7 @@
                     </div>
 
                     <div class="mb-4">
-                        <label class="form-label text-white">URL de Foto</label>
+                        <label class="form-label text-white">URL de foto ilustrativa (Google Imágenes)URL</label>
                         <input type="text" name="foto" class="form-control" value="{{ $concert->foto }}">
                     </div>
 

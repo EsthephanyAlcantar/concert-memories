@@ -114,7 +114,7 @@
 
                         <div class="mb-4">
                             <label class="form-label text-white">
-                                URL de Foto
+                                URL de foto ilustrativa (Google Imágenes)
                             </label>
 
                             <input type="text"
