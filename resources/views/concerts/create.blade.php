@@ -123,25 +123,6 @@
                             >
                         </div>
 
-                        <div class="mb-4">
-
-                            <label class="form-label text-white">
-                                Subir imagen
-                            </label>
-
-                            <input
-                                type="file"
-                                name="image_upload"
-                                class="form-control"
-                                accept="image/*"
-                            >
-
-                        </div>
-
-                        <p class="text-light small opacity-75 mb-4">
-                            Puedes subir una imagen o usar una URL.
-                        </p>
-
                         <button type="submit"
                                 class="btn spotify-btn w-100">
 

@@ -91,25 +91,6 @@
                         <input type="text" name="foto" class="form-control" value="{{ $concert->foto }}">
                     </div>
 
-                    <div class="mb-4">
-
-                        <label class="form-label text-white">
-                            Subir nueva imagen
-                        </label>
-
-                        <input
-                            type="file"
-                            name="image_upload"
-                            class="form-control"
-                            accept="image/*"
-                        >
-
-                        <p class="text-light small opacity-75 mt-2">
-                            Puedes subir una nueva imagen o dejar la actual.
-                        </p>
-
-                    </div>
-
                     <button type="submit" class="btn spotify-btn w-100">
                         Guardar cambios
                     </button>

@@ -23,13 +23,6 @@ class ConcertController extends Controller
     {
         $data = $request->all();
 
-        unset($data['image_upload']);
-
-        if ($request->hasFile('image_upload')) {
-            $path = $request->file('image_upload')->store('concerts', 'public');
-            $data['foto'] = '/storage/' . $path;
-        }
-
         Concert::create($data);
 
         return redirect()->route('concerts.index');
@@ -48,13 +41,6 @@ class ConcertController extends Controller
     public function update(Request $request, Concert $concert)
     {
         $data = $request->all();
-
-        unset($data['image_upload']);
-
-        if ($request->hasFile('image_upload')) {
-            $path = $request->file('image_upload')->store('concerts', 'public');
-            $data['foto'] = '/storage/' . $path;
-        }
 
         if (empty($data['foto'])) {
             unset($data['foto']);
